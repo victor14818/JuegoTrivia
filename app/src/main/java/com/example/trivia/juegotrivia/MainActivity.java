@@ -13,4 +13,5 @@ public class MainActivity extends AppCompatActivity {
 
     /* hola mundo*/
     int var;
+    int var2;
 }
