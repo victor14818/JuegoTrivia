@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">JuegoTrivia</string>
+    <string name="desc_conf_image">Enlace a la configuración de Preguntas</string>
+    <string name="lista_de_preguntas">Lista de Preguntas</string>
+    <string name="apply">Apply</string>
 </resources>
