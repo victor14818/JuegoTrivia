@@ -17,7 +17,7 @@
         android:id="@+id/layoutR"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:weightSum="1"
@@ -35,7 +35,7 @@
             android:gravity="center"
             android:textIsSelectable="false"
             android:layout_weight="0.04"
-            android:textSize="20sp"
+            android:textSize="@dimen/tituloConf"
             android:textStyle="bold|italic"
             />
 
@@ -45,38 +45,39 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:fontFamily="cursive"
             android:text="Texto*"
-            android:gravity="left"
+            android:gravity="start"
             android:textIsSelectable="false"
-            android:textSize="15sp"
+            android:textSize="@dimen/attConf"
             android:textStyle="bold|italic"
             android:layout_weight="0.04"
             android:layout_marginLeft="15dp"/>
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/attConfM"
             android:inputType="textMultiLine"
-            android:ems="10"
             android:id="@+id/editText_textoR"
             android:layout_weight="0.1"
             android:background="@android:color/holo_orange_light"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp" />
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:ems="10"/>
 
         <Switch
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Es correcta?"
             android:id="@+id/switchR"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:fontFamily="cursive"
-            android:textSize="15sp"
+            android:textSize="@dimen/attConf"
             android:textStyle="bold|italic"
-            android:layout_weight="0.04"
             android:textOn="Sí"
-            android:textOff="No" />
+            android:textOff="No"
+            android:layout_weight="0.04"
+            android:layout_marginTop="@dimen/attConfml" />
 
     </LinearLayout>
 
@@ -93,12 +94,14 @@
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:text="@string/apply"
             android:id="@+id/buttonApplyR"
             android:layout_weight=".25"
             android:layout_gravity="start"
-            android:textAppearance="@style/applyText" />
+            android:textAppearance="@style/applyText"
+            android:textSize="@dimen/attConf"
+            android:layout_marginBottom="@dimen/Scroll" />
 
     </LinearLayout>
 </RelativeLayout>

@@ -2,4 +2,10 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="tituloConf">90sp</dimen>
+    <dimen name="attConf">65sp</dimen>
+    <dimen name="attConfM">100sp</dimen>
+    <dimen name="attConfml">45dp</dimen>
+    <dimen name="Scroll">40dp</dimen>
+    <dimen name="Texto">30sp</dimen>
 </resources>
