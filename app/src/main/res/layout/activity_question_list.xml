@@ -29,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:fontFamily="cursive"
-                android:text="@string/edit_categoria"
+                android:text="@string/editCategoria"
                 android:id="@+id/TextViewTituloCategoria"
                 android:layout_gravity="center_horizontal"
                 android:gravity="center"
@@ -179,7 +179,7 @@
             android:src="@drawable/plus"
             android:scaleType="fitCenter"
             android:layout_weight="0.25"
-            android:contentDescription="@string/desc_conf_image"
+            android:contentDescription="@string/descConfImage"
             android:adjustViewBounds="false"
             android:onClick="addQuestion" />
 

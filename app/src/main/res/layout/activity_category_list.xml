@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:fontFamily="cursive"
-            android:text="@string/lista_de_categorias"
+            android:text="@string/listaCategorias"
             android:id="@+id/textViewCategorias"
             android:layout_gravity="center_horizontal"
             android:gravity="center"

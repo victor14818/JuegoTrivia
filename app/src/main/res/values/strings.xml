@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">JuegoTrivia</string>
-    <string name="desc_conf_image">Enlace a la configuración de Preguntas</string>
-    <string name="edit_categoria">Editar Categoría</string>
-    <string name="edit_preguntas">Editar Pregunta</string>
-    <string name="edit_respuesta">Editar Respuesta</string>
-    <string name="lista_de_categorias">Categorías</string>
+    <string name="descConfImage">Enlace a la configuración de Preguntas</string>
+    <string name="editCategoria">Editar Categoría</string>
+    <string name="editPreguntas">Editar Pregunta</string>
+    <string name="editRespuesta">Editar Respuesta</string>
+    <string name="listaCategorias">Categorías</string>
     <string name="apply">Apply</string>
 </resources>

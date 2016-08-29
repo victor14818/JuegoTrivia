@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:fontFamily="cursive"
-            android:text="@string/edit_respuesta"
+            android:text="@string/editRespuesta"
             android:id="@+id/TextViewTituloPregunta"
             android:layout_gravity="center_horizontal"
             android:gravity="center"

@@ -24,7 +24,7 @@
         android:scaleType="fitCenter"
         android:padding="0dp"
         android:background="@android:color/transparent"
-        android:contentDescription="@string/desc_conf_image"
+        android:contentDescription="@string/descConfImage"
         android:src="@drawable/gear"
         android:onClick="btnCfg" />
 
