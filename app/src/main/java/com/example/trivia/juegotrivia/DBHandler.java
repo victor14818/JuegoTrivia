@@ -12,22 +12,23 @@ public class DBHandler extends SQLiteOpenHelper {
 
     String create_categoria = "CREATE TABLE categoria " +
             "( " +
-            "nombre TEXT PRIMARY KEY NOT NULL, " +
-            "texto TEXT NOT NULL, " +
-            "imagen TEXT NOT NULL, " +
-            "imagen2 TEXT NOT NULL, " +
+            "nombre TEXT NOT NULL, " +
+            "texto TEXT, " +
             "audio TEXT " +
             ")";
 
     String create_pregunta = "CREATE TABLE pregunta " +
+            "(" +
             "texto TEXT NOT NULL, " +
-            "categoria TEXT NOT NULL." +
+            "categoria INT NOT NULL," +
+            "puntos INT," +
             "audio TEXT " +
             ")";
 
     String create_respuesta = "CREATE TABLE respuesta " +
+            "(" +
             "texto TEXT NOT NULL, " +
-            "escorrecta BOOLEAN NOT NULL, " +
+            "escorrecta INT, " +
             "pregunta INT NOT NULL, " +
             "audio TEXT " +
             ")";

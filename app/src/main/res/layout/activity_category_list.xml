@@ -9,28 +9,28 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.trivia.juegotrivia.AnswerActivity"
+    tools:context="com.example.trivia.juegotrivia.CategoryListActivity"
     android:background="@android:color/holo_orange_dark">
 
 
     <LinearLayout
-        android:id="@+id/layoutPreg"
+        android:id="@+id/layoutCat"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:weightSum="1"
+        android:layout_marginBottom="50dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:weightSum="1"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="50dp">
+        android:layout_gravity="center_horizontal" >
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:fontFamily="cursive"
-            android:text="@string/edit_preguntas"
-            android:id="@+id/TextViewTituloPregunta"
+            android:text="@string/lista_de_categorias"
+            android:id="@+id/textViewCategorias"
             android:layout_gravity="center_horizontal"
             android:gravity="center"
             android:textIsSelectable="false"
@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:fontFamily="cursive"
-                android:text="Texto*"
+                android:text="Nueva Password"
                 android:gravity="left"
                 android:textIsSelectable="false"
                 android:textSize="15sp"
@@ -61,9 +61,9 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
+                android:inputType="textPassword"
                 android:ems="10"
-                android:id="@+id/editText_textoPrg"
+                android:id="@+id/editTextNvPass"
                 android:layout_weight="1"
                 android:background="@android:color/holo_orange_light"
                 android:layout_marginLeft="15dp"
@@ -83,7 +83,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:fontFamily="cursive"
-                android:text="Puntos*"
+                android:text="Password Anterior"
                 android:gravity="left"
                 android:textIsSelectable="false"
                 android:textSize="15sp"
@@ -93,40 +93,9 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="textPassword"
                 android:ems="10"
-                android:id="@+id/editText_ptsPrg"
-                android:layout_weight="1"
-                android:background="@android:color/holo_orange_light"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:textStyle="bold|italic" />
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.04"
-            android:padding="5dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:fontFamily="cursive"
-                android:text="Audio"
-                android:gravity="left"
-                android:textIsSelectable="false"
-                android:textSize="15sp"
-                android:textStyle="bold|italic"
-                android:layout_marginLeft="15dp"/>
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:ems="10"
-                android:id="@+id/editText_audioPrg"
+                android:id="@+id/editTextOldPass"
                 android:layout_weight="1"
                 android:background="@android:color/holo_orange_light"
                 android:layout_marginLeft="15dp"
@@ -137,22 +106,19 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/scrollViewListaRespuestas"
+            android:id="@+id/scrollViewListaCategorias"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.84"
+            android:layout_weight="0.88"
             android:fillViewport="false">
 
             <LinearLayout
-                android:id="@+id/layoutRespuestas"
+                android:id="@+id/layoutCategorias"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
-
             </LinearLayout>
         </ScrollView>
-
     </LinearLayout>
-
 
     <LinearLayout
         android:orientation="horizontal"
@@ -161,29 +127,16 @@
         android:weightSum="1"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:gravity="end"
-        android:layout_marginBottom="5dp">
+        android:gravity="end">
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:text="@string/apply"
-            android:id="@+id/buttonApplyPrg"
+            android:id="@+id/buttonPass"
             android:layout_weight=".25"
             android:layout_gravity="start"
-            android:textAppearance="@style/applyText" />
-
-        <ImageButton
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:id="@+id/imageButton_addRpt"
-            android:src="@drawable/plus"
-            android:scaleType="fitCenter"
-            android:layout_weight="0.25"
-            android:contentDescription="@string/desc_conf_image"
-            android:adjustViewBounds="false"
-            android:onClick="addAnswer" />
+            android:textAppearance="@style/applyText"/>
 
     </LinearLayout>
-
 </RelativeLayout>

@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     //acción btn configuración
     public void btnCfg(View v) {
-        Intent confIntent = new Intent(this, QuestionListActivity.class);
+        Intent confIntent = new Intent(this, CategoryListActivity.class);
         startActivity(confIntent);
     }
 }

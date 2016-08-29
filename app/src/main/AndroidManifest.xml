@@ -24,7 +24,9 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".AnswerActivity"></activity>
+        <activity android:name=".AnswerActivity" />
+        <activity android:name=".CategoryListActivity" />
+        <activity android:name=".EditRespuesta"></activity>
     </application>
 
 </manifest>
