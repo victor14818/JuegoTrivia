@@ -32,9 +32,12 @@
                 android:layout_width="0dip"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
-                android:text="@string/Buttonp2"
+                android:text="pregunta"
                 android:background="@drawable/custom_button_round_rect2_border"
                 android:textColor="#fff"
+                android:fontFamily="cursive"
+                android:textStyle="bold"
+                android:textSize="35sp"
                 />
         </TableRow>
 
@@ -61,10 +64,13 @@
                 android:layout_width="0dip"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
-                android:text="@string/Buttonr11"
+                android:text="respuesta1"
                 android:onClick="onButtonClick"
                 android:background="@drawable/custom_button_press_effect"
                 android:textColor="#fff"
+                android:fontFamily="cursive"
+                android:textStyle="bold"
+                android:textSize="30sp"
                 />
             <LinearLayout
                 android:layout_width="100sp"
@@ -96,10 +102,13 @@
                 android:layout_width="0dip"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
-                android:text="string/Buttonr12"
+                android:text="r2"
                 android:onClick="onButtonClick"
                 android:background="@drawable/custom_button_press_effect"
                 android:textColor="#fff"
+                android:fontFamily="cursive"
+                android:textStyle="bold"
+                android:textSize="30sp"
                 />
             <LinearLayout
                 android:layout_width="100sp"
@@ -131,10 +140,13 @@
                 android:layout_width="0dip"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
-                android:text="string/Buttonr13"
+                android:text="R3"
                 android:onClick="onButtonClick"
                 android:background="@drawable/custom_button_press_effect"
                 android:textColor="#fff"
+                android:fontFamily="cursive"
+                android:textStyle="bold"
+                android:textSize="30sp"
                 />
 
             <LinearLayout

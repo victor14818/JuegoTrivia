@@ -40,7 +40,9 @@
                     android:id="@+id/imageViewTmp0"
                     android:scaleType="fitCenter"
                     android:layout_margin="@dimen/MarginPrincipal"
-                    android:layout_weight="0.2" />
+                    android:layout_weight="0.2"
+                    android:onClick="btnpreguntas"
+                    />
 
                 <ImageView
                     android:layout_width="match_parent"

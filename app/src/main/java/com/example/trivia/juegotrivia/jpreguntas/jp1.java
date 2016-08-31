@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 
 public class jp1 extends AppCompatActivity {
@@ -12,10 +13,19 @@ public class jp1 extends AppCompatActivity {
     static int miVar=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        String CambiarNombre = "Pregunta NO."+ ++miVar;
-        getSupportActionBar().setTitle(CambiarNombre);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jp1);
+        Button textView = (Button) findViewById(R.id.pregunta_A);
+        assert textView != null;
+        textView.setText(++miVar+") "+"Ingresar pregunta");
+
+        textView = (Button) findViewById(R.id.respuesta1_A);
+        textView.setText("A) "+"Ingresar Respuesta1");
+        textView = (Button) findViewById(R.id.respuesta2_A);
+        textView.setText("B) "+"Ingresar Respuesta2");
+        textView = (Button) findViewById(R.id.respuesta3_A);
+        textView.setText("C) "+"Ingresar Respuesta3");
     }
 
     public void onButtonClick(View V) {

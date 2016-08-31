@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import com.example.trivia.juegotrivia.R;
 
@@ -17,19 +18,23 @@ public class jp2 extends AppCompatActivity {
          * Consultar a BD para desplegar la informacion en el texto de los botone
          *
          **/
-        String CambiarNombre = "Pregunta NO."+ ++miVar;
-        getSupportActionBar().setTitle(CambiarNombre);
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jp2);
+        Button textView = (Button) findViewById(R.id.pregunta);
+        textView.setText(++miVar+") "+"Ingresar pregunta");
+
+        textView = (Button) findViewById(R.id.respuesta1);
+        textView.setText("A) "+"Ingresar respuesta1");
+        textView = (Button) findViewById(R.id.respuesta2);
+        textView.setText("B) "+"Ingresar respuesta2");
+        textView = (Button) findViewById(R.id.respuesta3);
+        textView.setText("C) "+"Ingresar respuesta3");
     }
 
     public void onButtonClick(View V) {
         if (V.getId() == R.id.respuesta1) {
             boton1();
         }else if(V.getId() == R.id.respuesta2){
-            boton2();
-        }else if(V.getId() == R.id.pregunta){
             boton2();
         }else{//respuesta3_A
             boton3();

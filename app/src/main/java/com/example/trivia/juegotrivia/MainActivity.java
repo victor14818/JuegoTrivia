@@ -1,4 +1,5 @@
 package com.example.trivia.juegotrivia;
+import com.example.trivia.juegotrivia.jpreguntas.jp1;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -71,6 +72,13 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    //inicio cuestionario
+    public void btnpreguntas(View v) {
+        Intent confIntent = new Intent(this, jp1.class);
+        startActivity(confIntent);
+    }
+
 
     //acción btn configuración
     public void btnCfg(View v) {
