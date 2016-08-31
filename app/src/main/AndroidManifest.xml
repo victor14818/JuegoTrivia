@@ -3,6 +3,7 @@
     package="com.example.trivia.juegotrivia">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <!-- android:maxSdkVersion="18" /> -->
     <application
         android:allowBackup="true"
@@ -30,7 +31,9 @@
         <activity android:name=".CategoryListActivity" />
         <activity android:name=".EditRespuesta" />
         <activity android:name=".ShowQuest" />
-        <activity android:name=".Tmp"></activity>
+        <activity android:name=".Tmp" />
+        <activity android:name=".jpreguntas.jp1" />
+        <activity android:name=".jpreguntas.jp2"></activity>
     </application>
 
 </manifest>

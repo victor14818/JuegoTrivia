@@ -5,5 +5,15 @@
     <string name="editPreguntas">Editar Pregunta</string>
     <string name="editRespuesta">Editar Respuesta</string>
     <string name="listaCategorias">Categorías</string>
+
+    <string name="Buttonp">cadena</string>
+    <string name="Buttonr1">cadena</string>
+    <string name="Buttonr2">cadena</string>
+    <string name="Buttonr3">cadena</string>
+    <string name="Buttonp2">cadena</string>
+    <string name="Buttonr11">cadena</string>
+    <string name="Buttonr21">cadena</string>
+    <string name="Buttonr31">cadena</string>
+
     <string name="apply">Apply</string>
 </resources>
