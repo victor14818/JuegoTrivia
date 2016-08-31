@@ -4,13 +4,15 @@ package com.example.trivia.juegotrivia;
  * Created by victor on 27/08/2016.
  */
 public class Categoria {
-    private String nombre, texto, audio;
+    private String nombre, texto, imgp, imgs, audio;
     private Long rowid;
 
-    public Categoria(String nombre, String texto, String audio, Long rowid) {
+    public Categoria(String nombre, String texto, String audio, String imgp, String imps, Long rowid) {
         this.nombre = nombre;
         this.texto = texto;
         this.audio = audio;
+        this.imgp = imgp;
+        this.imgs = imps;
         this.rowid = rowid;
     }
 
@@ -36,6 +38,22 @@ public class Categoria {
 
     public void setAudio(String audio) {
         this.audio = audio;
+    }
+
+    public String getImgp() {
+        return imgp;
+    }
+
+    public void setImgp(String imgp) {
+        this.imgp = imgp;
+    }
+
+    public String getImgs() {
+        return imgs;
+    }
+
+    public void setImgs(String imgs) {
+        this.imgs = imgs;
     }
 
     public Long getRowid() {

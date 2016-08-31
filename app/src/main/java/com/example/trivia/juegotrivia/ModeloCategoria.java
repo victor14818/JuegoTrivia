@@ -51,6 +51,8 @@ public class ModeloCategoria {
         ContentValues contentValues = new ContentValues();
         contentValues.put( "nombre" , ct.getNombre());
         contentValues.put( "texto" , ct.getTexto());
+        contentValues.put( "imagen1" , ct.getImgp());
+        contentValues.put( "imagen2" , ct.getImgs());
         contentValues.put( "audio" , ct.getAudio());
         return ingresar("categoria",contentValues);
     }
@@ -60,6 +62,8 @@ public class ModeloCategoria {
         ContentValues contentValues = new ContentValues();
         contentValues.put( "nombre" , ct.getNombre());
         contentValues.put( "texto" , ct.getTexto());
+        contentValues.put( "imagen1" , ct.getImgp());
+        contentValues.put( "imagen2" , ct.getImgs());
         contentValues.put( "audio" , ct.getAudio());
         return modificar("categoria",contentValues," rowid = ?", new String[]{String.valueOf(ct.getRowid())});
     }
@@ -98,7 +102,7 @@ public class ModeloCategoria {
             if(crs != null)
             {
                 crs.moveToFirst();
-                respuesta = new Categoria(crs.getString(1),crs.getString(2),crs.getString(3),crs.getLong(0));
+                respuesta = new Categoria(crs.getString(1),crs.getString(2),crs.getString(5),crs.getString(3),crs.getString(4),crs.getLong(0));
             }
             crs.close();
             db.close();
@@ -121,7 +125,7 @@ public class ModeloCategoria {
                 respuesta = new Categoria[crs.getCount()];
                 crs.moveToFirst();
                 for (int i = 0; i < crs.getCount(); i++) {
-                    respuesta[i] = new Categoria(crs.getString(1),crs.getString(2),crs.getString(3),crs.getLong(0));
+                    respuesta[i] = new Categoria(crs.getString(1),crs.getString(2),crs.getString(5),crs.getString(3),crs.getString(4),crs.getLong(0));
                     crs.moveToNext();
                 }
             }

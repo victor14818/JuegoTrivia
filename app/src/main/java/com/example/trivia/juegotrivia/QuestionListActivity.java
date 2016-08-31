@@ -66,8 +66,17 @@ public class QuestionListActivity extends AppCompatActivity {
         //texto
         et = (EditText) findViewById(R.id.editText_textoCat);
         et.setText(""+cat_actual.getTexto());
-        //audio
+
+        //imagen Menu
         et = (EditText) findViewById(R.id.editText_audioCat);
+        et.setText(""+cat_actual.getImgp());
+
+        //imagen Segunda
+        et = (EditText) findViewById(R.id.editText_imgpCat);
+        et.setText(""+cat_actual.getImgs());
+
+        //audio
+        et = (EditText) findViewById(R.id.editText_imgsCat);
         et.setText(""+cat_actual.getAudio());
     }
 
@@ -103,7 +112,7 @@ public class QuestionListActivity extends AppCompatActivity {
     {
         try {
             EditText et;
-            String n, t, a;
+            String n, t, a, ip, ims;
             ModeloCategoria md = new ModeloCategoria(this);
 
             et = (EditText) findViewById(R.id.editText_nombreCat);
@@ -112,9 +121,13 @@ public class QuestionListActivity extends AppCompatActivity {
             t = et.getText().toString();
             et = (EditText) findViewById(R.id.editText_audioCat);
             a = et.getText().toString();
+            et = (EditText) findViewById(R.id.editText_imgpCat);
+            ip = et.getText().toString();
+            et = (EditText) findViewById(R.id.editText_imgsCat);
+            ims = et.getText().toString();
 
             if(!n.equals("") && !t.equals("")) {
-                Categoria nv = new Categoria(n, t, a, cat_actual.getRowid());
+                Categoria nv = new Categoria(n, t, a, ip, ims, cat_actual.getRowid());
                 md.updateCategoria(nv);
                 Toast.makeText(this, "Las modificaciones han sido correctas", Toast.LENGTH_SHORT).show();
             }

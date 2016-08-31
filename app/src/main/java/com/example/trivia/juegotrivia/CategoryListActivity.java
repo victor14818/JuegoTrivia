@@ -31,18 +31,7 @@ public class CategoryListActivity extends AppCompatActivity {
 
     private void inicializarCategorias()
     {
-        ModeloCategoria md = new ModeloCategoria(this);
-        if(md.IsEmpty("categoria"))
-        {
-            String [] categorias = new String[]{"Alta Verapaz","Sololá", "Petén", "Escuintla", "Quiché",
-                                                "Jutiapa", "Jalapa", "Izabal", "Chiquimula", "Quetzaltenango"};
-            Categoria ct;
-            for (int i = 0; i < categorias.length; i++) {
-                ct = new Categoria(categorias[i],null,null,Long.parseLong("-1"));
-                md.addCategoria(ct);
-            }
-        }
-        md.destruir();
+
     }
 
     private void listar() {

@@ -14,6 +14,8 @@ public class DBHandler extends SQLiteOpenHelper {
             "( " +
             "nombre TEXT NOT NULL, " +
             "texto TEXT, " +
+            "imagen1 TEXT," +
+            "imagen2 TEXT," +
             "audio TEXT " +
             ")";
 
