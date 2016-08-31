@@ -4,29 +4,29 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
 
     <!--config-->
-<!--    <dimen name="tituloConf">90sp</dimen>
+    <dimen name="tituloConf">90sp</dimen>
     <dimen name="attConf">65sp</dimen>
     <dimen name="attConfM">100sp</dimen>
     <dimen name="attConfml">45dp</dimen>
     <dimen name="Scroll">40dp</dimen>
-    <dimen name="Texto">30sp</dimen>-->
+    <dimen name="Texto">30sp</dimen>
 
-    <dimen name="tituloConf">30sp</dimen>
+<!--    <dimen name="tituloConf">30sp</dimen>
     <dimen name="attConf">21sp</dimen>
     <dimen name="attConfM">33sp</dimen>
     <dimen name="attConfml">15dp</dimen>
     <dimen name="Scroll">12dp</dimen>
-    <dimen name="Texto">10sp</dimen>
+    <dimen name="Texto">10sp</dimen>-->
 
-    <!--menu principal-->
-    <!--<dimen name="MarginPrincipal">5dp</dimen>-->
-    <!--<dimen name="BottonConf">65dp</dimen>-->
-    <!--<dimen name="MargenBottonConf">10dp</dimen>-->
+<!--    menu principal-->
+    <dimen name="MarginPrincipal">5dp</dimen>
+    <dimen name="BottonConf">65dp</dimen>
+    <dimen name="MargenBottonConf">10dp</dimen>
 
      <!--menu principal-->
-    <dimen name="MarginPrincipal">5dp</dimen>
+<!--    <dimen name="MarginPrincipal">5dp</dimen>
     <dimen name="BottonConf">35dp</dimen>
-    <dimen name="MargenBottonConf">20dp</dimen>
+    <dimen name="MargenBottonConf">20dp</dimen>-->
 
 
 </resources>
