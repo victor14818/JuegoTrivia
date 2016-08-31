@@ -21,20 +21,18 @@ public class EditRespuesta extends AppCompatActivity {
         final Long tmp = myIntent.getLongExtra("respuesta",-1);
         prg_id = myIntent.getLongExtra("pregunta", -1);
 
-        if(tmp > 0) {
-            ModeloCategoria md = new ModeloCategoria(this);
-            System.out.println("tratando de leer a respuesta " + tmp);
-            r_actual = md.getRespuesta(tmp);
-            md.destruir();
-            colocarDatosRespuesta();
-            Button btn = (Button) findViewById(R.id.buttonApplyR);
-            btn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    ApplyRespuesta(tmp);
-                }
-            });
-        }
+        ModeloCategoria md = new ModeloCategoria(this);
+        System.out.println("tratando de leer a respuesta " + tmp);
+        r_actual = md.getRespuesta(tmp);
+        md.destruir();
+        colocarDatosRespuesta();
+        Button btn = (Button) findViewById(R.id.buttonApplyR);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ApplyRespuesta(tmp);
+            }
+        });
     }
 
     private void colocarDatosRespuesta()

@@ -100,7 +100,7 @@ public class jp extends AppCompatActivity {
             //Colocar Texto Pregunta
             Button textView = (Button) findViewById(R.id.pregunta_P);
             assert textView != null;
-            textView.setText(miVar+") "+ pregunta.getTexto().toUpperCase());
+            textView.setText(pregunta.getTexto().toUpperCase());
         }
         md.destruir();
     }

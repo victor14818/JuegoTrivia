@@ -54,20 +54,18 @@ public class AnswerActivity extends AppCompatActivity {
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.layoutRespuestas);
         linearLayout.removeAllViews();
         final Long tmp = tmp1;
-        if(tmp > 0) {
-            ModeloCategoria md = new ModeloCategoria(this);
-            pregunta_actual = md.getPrgunta(tmp);
-            md.destruir();
-            colocarDatosPregunta();
-            listar();
-            Button btn = (Button) findViewById(R.id.buttonApplyPrg);
-            btn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    ApplyPregunta(tmp);
-                }
-            });
-        }
+        ModeloCategoria md = new ModeloCategoria(this);
+        pregunta_actual = md.getPrgunta(tmp);
+        md.destruir();
+        colocarDatosPregunta();
+        listar();
+        Button btn = (Button) findViewById(R.id.buttonApplyPrg);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ApplyPregunta(tmp);
+            }
+        });
     }
 
     private void colocarDatosPregunta()
