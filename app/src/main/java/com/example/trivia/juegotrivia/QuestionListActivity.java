@@ -24,10 +24,9 @@ public class QuestionListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question_list);
         Intent myIntent = getIntent();
-        Long tmp = myIntent.getLongExtra("categoria",0);
+        Long tmp = myIntent.getLongExtra("categoria",-1);
 
         ModeloCategoria md = new ModeloCategoria(this);
-        System.out.println("tratando de leer a " + tmp);
         cat_actual =  md.getCategoria(tmp);
         md.destruir();
 
@@ -55,57 +54,59 @@ public class QuestionListActivity extends AppCompatActivity {
 
     private void colocarDatosCategoria()
     {
-        EditText et;
-        //nombre
-        TextView tv = (TextView) findViewById(R.id.TextViewTituloCategoria);
-        tv.setText(""+cat_actual.getNombre());
-        tv.setTextSize(40);
+        if(cat_actual != null) {
+            EditText et;
+            //nombre
+            TextView tv = (TextView) findViewById(R.id.TextViewTituloCategoria);
+            tv.setText("" + cat_actual.getNombre());
+            tv.setTextSize(40);
 
-        et = (EditText) findViewById(R.id.editText_nombreCat);
-        et.setText(""+cat_actual.getNombre());
-        //texto
-        et = (EditText) findViewById(R.id.editText_textoCat);
-        et.setText(""+cat_actual.getTexto());
+            et = (EditText) findViewById(R.id.editText_nombreCat);
+            et.setText("" + cat_actual.getNombre());
+            //texto
+            et = (EditText) findViewById(R.id.editText_textoCat);
+            et.setText("" + cat_actual.getTexto());
 
-        //imagen Menu
-        et = (EditText) findViewById(R.id.editText_audioCat);
-        et.setText(""+cat_actual.getImgp());
+            //imagen Menu
+            et = (EditText) findViewById(R.id.editText_audioCat);
+            et.setText("" + cat_actual.getImgp());
 
-        //imagen Segunda
-        et = (EditText) findViewById(R.id.editText_imgpCat);
-        et.setText(""+cat_actual.getImgs());
+            //imagen Segunda
+            et = (EditText) findViewById(R.id.editText_imgpCat);
+            et.setText("" + cat_actual.getImgs());
 
-        //audio
-        et = (EditText) findViewById(R.id.editText_imgsCat);
-        et.setText(""+cat_actual.getAudio());
+            //audio
+            et = (EditText) findViewById(R.id.editText_imgsCat);
+            et.setText("" + cat_actual.getAudio());
+        }
     }
 
     private void listar()
     {
-
-        ModeloCategoria md = new ModeloCategoria(this);
-        final LinearLayout linearLayout = (LinearLayout)findViewById(R.id.layoutPreguntas);
-        final Pregunta [] preguntas = md.getAllPreguntas(cat_actual);
-        Button btn;
-        for (int i = 0; i < preguntas.length; i++) {
-            final int aux = i;
-            btn = new Button(this);
-            btn.setText(preguntas[i].getTexto());
-            btn.setTextAppearance(this,R.style.listText);
-            btn.setWidth(linearLayout.getWidth());
-            btn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-/*                    Intent answerIntent = new Intent(getApplicationContext(), AnswerActivity.class);
-                    answerIntent.putExtra("pregunta",preguntas[aux].getRowid());
-                    startActivity(answerIntent);*/
-                    AlertDialog tmp = createSimpleDialog(preguntas[aux].getRowid(),linearLayout);
-                    tmp.show();
-                }
-            });
-            linearLayout.addView(btn);
+        if(cat_actual != null) {
+            ModeloCategoria md = new ModeloCategoria(this);
+            final LinearLayout linearLayout = (LinearLayout) findViewById(R.id.layoutPreguntas);
+            final Pregunta[] preguntas = md.getAllPreguntas(cat_actual);
+            Button btn;
+            for (int i = 0; i < preguntas.length; i++) {
+                final int aux = i;
+                btn = new Button(this);
+                btn.setText(preguntas[i].getTexto());
+                btn.setTextAppearance(this, R.style.listText);
+                btn.setWidth(linearLayout.getWidth());
+                btn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+    /*                    Intent answerIntent = new Intent(getApplicationContext(), AnswerActivity.class);
+                        answerIntent.putExtra("pregunta",preguntas[aux].getRowid());
+                        startActivity(answerIntent);*/
+                        AlertDialog tmp = createSimpleDialog(preguntas[aux].getRowid(), linearLayout);
+                        tmp.show();
+                    }
+                });
+                linearLayout.addView(btn);
+            }
         }
-
     }
 
     private void ApplyCategoria()
@@ -143,10 +144,12 @@ public class QuestionListActivity extends AppCompatActivity {
 
     public void addQuestion(View v)
     {
-        Intent AnswerIntent = new Intent(this, AnswerActivity.class);
-        AnswerIntent.putExtra("pregunta", -1);
-        AnswerIntent.putExtra("categoria", cat_actual.getRowid());
-        startActivity(AnswerIntent);
+        if(cat_actual != null) {
+            Intent AnswerIntent = new Intent(this, AnswerActivity.class);
+            AnswerIntent.putExtra("pregunta", -1);
+            AnswerIntent.putExtra("categoria", cat_actual.getRowid());
+            startActivity(AnswerIntent);
+        }
     }
 
     private AlertDialog createSimpleDialog(final Long rowid, final LinearLayout l) {

@@ -12,6 +12,9 @@ import android.widget.ImageView;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     /**
@@ -57,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
             ImageView ibtmp;
             Bitmap bmtmp;
             for (int i = 0; i < categorias.length || i < 10; i++) {
+
                 int idtmp = getResources().getIdentifier("imageViewTmp" + i, "id", getPackageName());
                 ibtmp = (ImageView) findViewById(idtmp);
                 try {
@@ -68,15 +72,37 @@ public class MainActivity extends AppCompatActivity {
                 }
                 ibtmp.setImageBitmap(bmtmp);
 
-                //Listener para Actividad
+                //elegir las tres preguntas a usar
+                Pregunta[] prgTmp = md.getAllPreguntas(categorias[i]);
+                int limite = 3;
+
+                if(prgTmp.length >= limite) {
+                    final ArrayList<Long> prgSeleccionadas = new ArrayList();
+                    Random rm = new Random();
+                    for (int k = 0; k < limite; k++) {
+                        Long auxa = prgTmp[rm.nextInt(prgTmp.length)].getRowid();
+                        while (prgSeleccionadas.contains(auxa)) {
+                            auxa = prgTmp[rm.nextInt(prgTmp.length)].getRowid();
+                        }
+                        prgSeleccionadas.add(auxa);
+                    }
+
+                    //Listener para Actividad
+                    ibtmp.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent confIntent = new Intent(getApplicationContext(), jp.class);
+                            confIntent.putExtra("miVar", 0);
+                            for (int y = 0; y < prgSeleccionadas.size(); y++) {
+                                Long parametro = (Long) prgSeleccionadas.get(y);
+                                confIntent.putExtra("p" + y, parametro);
+                            }
+                            startActivity(confIntent);
+                        }
+                    });
+                }
             }
         }
-    }
-
-    //inicio cuestionario
-    public void btnpreguntas(View v) {
-        Intent confIntent = new Intent(this, jp1.class);
-        startActivity(confIntent);
     }
 
 

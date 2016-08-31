@@ -54,62 +54,63 @@ public class AnswerActivity extends AppCompatActivity {
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.layoutRespuestas);
         linearLayout.removeAllViews();
         final Long tmp = tmp1;
-        if(tmp >= 0) {
+        if(tmp > 0) {
             ModeloCategoria md = new ModeloCategoria(this);
-            System.out.println("tratando de leer a pregunta " + tmp);
             pregunta_actual = md.getPrgunta(tmp);
             md.destruir();
             colocarDatosPregunta();
             listar();
+            Button btn = (Button) findViewById(R.id.buttonApplyPrg);
+            btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ApplyPregunta(tmp);
+                }
+            });
         }
-        Button btn = (Button) findViewById(R.id.buttonApplyPrg);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ApplyPregunta(tmp);
-            }
-        });
-
     }
 
     private void colocarDatosPregunta()
     {
-        EditText et;
-        //nombre
-        et = (EditText) findViewById(R.id.editText_textoPrg);
-        et.setText(""+pregunta_actual.getTexto());
-        //texto
-        et = (EditText) findViewById(R.id.editText_ptsPrg);
-        et.setText(""+pregunta_actual.getPuntos());
-        //audio
-        et = (EditText) findViewById(R.id.editText_audioPrg);
-        et.setText(""+pregunta_actual.getAudio());
+        if(pregunta_actual != null) {
+            EditText et;
+            //nombre
+            et = (EditText) findViewById(R.id.editText_textoPrg);
+            et.setText("" + pregunta_actual.getTexto());
+            //texto
+            et = (EditText) findViewById(R.id.editText_ptsPrg);
+            et.setText("" + pregunta_actual.getPuntos());
+            //audio
+            et = (EditText) findViewById(R.id.editText_audioPrg);
+            et.setText("" + pregunta_actual.getAudio());
+        }
     }
 
     private void listar()
     {
-
-        ModeloCategoria md = new ModeloCategoria(this);
-        final LinearLayout linearLayout = (LinearLayout)findViewById(R.id.layoutRespuestas);
-        final Respuesta [] respuestas = md.getAllRespuestas(pregunta_actual);
-        Button btn;
-        for (int i = 0; i < respuestas.length; i++) {
-            final int aux = i;
-            btn = new Button(this);
-            btn.setText(respuestas[i].getTexto());
-            btn.setTextAppearance(this,R.style.listText);
-            btn.setWidth(linearLayout.getWidth());
-            btn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    AlertDialog tmp = createSimpleDialog(respuestas[aux].getRowid(),linearLayout);
-                    tmp.show();
+        if(pregunta_actual != null) {
+            ModeloCategoria md = new ModeloCategoria(this);
+            final LinearLayout linearLayout = (LinearLayout) findViewById(R.id.layoutRespuestas);
+            final Respuesta[] respuestas = md.getAllRespuestas(pregunta_actual);
+            Button btn;
+            for (int i = 0; i < respuestas.length; i++) {
+                final int aux = i;
+                btn = new Button(this);
+                btn.setText(respuestas[i].getTexto());
+                btn.setTextAppearance(this, R.style.listText);
+                btn.setWidth(linearLayout.getWidth());
+                btn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        AlertDialog tmp = createSimpleDialog(respuestas[aux].getRowid(), linearLayout);
+                        tmp.show();
+                    }
+                });
+                if (respuestas[aux].isCorrecta() > 0) {
+                    btn.setBackgroundColor(Color.rgb(11, 108, 4));
                 }
-            });
-            if(respuestas[aux].isCorrecta()>0) {
-                btn.setBackgroundColor(Color.rgb(11, 108, 4));
+                linearLayout.addView(btn);
             }
-            linearLayout.addView(btn);
         }
     }
 
@@ -152,10 +153,12 @@ public class AnswerActivity extends AppCompatActivity {
 
     public void addAnswer(View v)
     {
-        Intent AnswerIntent = new Intent(this, EditRespuesta.class);
-        AnswerIntent.putExtra("respuesta", -1);
-        AnswerIntent.putExtra("pregunta", pregunta_actual.getRowid());
-        startActivity(AnswerIntent);
+        if(pregunta_actual != null) {
+            Intent AnswerIntent = new Intent(this, EditRespuesta.class);
+            AnswerIntent.putExtra("respuesta", -1);
+            AnswerIntent.putExtra("pregunta", pregunta_actual.getRowid());
+            startActivity(AnswerIntent);
+        }
     }
 
     private AlertDialog createSimpleDialog(final Long rowid, final LinearLayout l) {

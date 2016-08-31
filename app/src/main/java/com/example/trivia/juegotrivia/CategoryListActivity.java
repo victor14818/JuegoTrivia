@@ -16,8 +16,6 @@ public class CategoryListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category_list);
-        inicializarCategorias();
-        //listar();
     }
 
     @Override
@@ -27,11 +25,6 @@ public class CategoryListActivity extends AppCompatActivity {
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.layoutCategorias);
         linearLayout.removeAllViews();
         listar();
-    }
-
-    private void inicializarCategorias()
-    {
-
     }
 
     private void listar() {
@@ -63,31 +56,32 @@ public class CategoryListActivity extends AppCompatActivity {
         }
     }
 
-    /*private AlertDialog createSimpleDialog(final Long rowid) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//    private AlertDialog createSimpleDialog(final Long rowid) {
+//        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//
+//        builder.setTitle("Qué deseas hacer")
+//                .setMessage("Eliminar la categoría o modificarla")
+//                .setPositiveButton("Modificar",
+//                        new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                Intent qyestionIntent = new Intent(getApplicationContext(), QuestionListActivity.class);
+//                                qyestionIntent.putExtra("categoria",rowid);
+//                                startActivity(qyestionIntent);
+//                            }
+//                        })
+//                .setNegativeButton("Eliminar",
+//                        new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                ModeloCategoria md = new ModeloCategoria(getApplicationContext());
+//                                md.deleteCategoria(rowid);
+//                                md.destruir();
+//                            }
+//                        })
+//                .setCancelable(true);
+//
+//        return builder.create();
+//    }
 
-        builder.setTitle("Qué deseas hacer")
-                .setMessage("Eliminar la categoría o modificarla")
-                .setPositiveButton("Modificar",
-                        new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                Intent qyestionIntent = new Intent(getApplicationContext(), QuestionListActivity.class);
-                                qyestionIntent.putExtra("categoria",rowid);
-                                startActivity(qyestionIntent);
-                            }
-                        })
-                .setNegativeButton("Eliminar",
-                        new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                ModeloCategoria md = new ModeloCategoria(getApplicationContext());
-                                md.deleteCategoria(rowid);
-                                md.destruir();
-                            }
-                        })
-                .setCancelable(true);
-
-        return builder.create();
-    }*/
 }

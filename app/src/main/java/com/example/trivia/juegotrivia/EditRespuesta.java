@@ -21,34 +21,36 @@ public class EditRespuesta extends AppCompatActivity {
         final Long tmp = myIntent.getLongExtra("respuesta",-1);
         prg_id = myIntent.getLongExtra("pregunta", -1);
 
-        if(tmp >= 0) {
+        if(tmp > 0) {
             ModeloCategoria md = new ModeloCategoria(this);
             System.out.println("tratando de leer a respuesta " + tmp);
             r_actual = md.getRespuesta(tmp);
             md.destruir();
             colocarDatosRespuesta();
+            Button btn = (Button) findViewById(R.id.buttonApplyR);
+            btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ApplyRespuesta(tmp);
+                }
+            });
         }
-        Button btn = (Button) findViewById(R.id.buttonApplyR);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ApplyRespuesta(tmp);
-            }
-        });
     }
 
     private void colocarDatosRespuesta()
     {
-        EditText et;
-        //nombre
-        et = (EditText) findViewById(R.id.editText_textoR);
-        et.setText(""+r_actual.getTexto());
-        //correcta
-        Switch sw = (Switch) findViewById(R.id.switchR);
-        if(r_actual.isCorrecta() > 0)
-            sw.setChecked(true);
-        else
-            sw.setChecked(false);
+        if(r_actual != null) {
+            EditText et;
+            //nombre
+            et = (EditText) findViewById(R.id.editText_textoR);
+            et.setText("" + r_actual.getTexto());
+            //correcta
+            Switch sw = (Switch) findViewById(R.id.switchR);
+            if (r_actual.isCorrecta() > 0)
+                sw.setChecked(true);
+            else
+                sw.setChecked(false);
+        }
     }
 
     private void ApplyRespuesta(Long tmp)

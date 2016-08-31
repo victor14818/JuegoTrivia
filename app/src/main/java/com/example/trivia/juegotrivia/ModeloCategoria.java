@@ -42,7 +42,6 @@ public class ModeloCategoria {
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
-        System.out.println(" esta Vacio " + respuesta);
         return respuesta;
     }
 
@@ -247,6 +246,31 @@ public class ModeloCategoria {
         try {
             db = manejador.getReadableDatabase();
             Cursor crs = db.query("respuesta",new String[] { "rowid", "*" }, " pregunta = ? ", new String[] {String.valueOf(ct.getRowid())}, null, null, null, null);
+
+            if(crs != null)
+            {
+                respuesta = new Respuesta[crs.getCount()];
+                crs.moveToFirst();
+                for (int i = 0; i < crs.getCount(); i++) {
+                    respuesta[i] = new Respuesta(crs.getString(1),crs.getInt(2),crs.getLong(3),crs.getLong(0));
+                    crs.moveToNext();
+                }
+            }
+
+            crs.close();
+            db.close();
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        return respuesta;
+    }
+
+    public Respuesta[] getAllRespuestasFilter(Pregunta ct, int filter)
+    {
+        Respuesta [] respuesta = null;
+        try {
+            db = manejador.getReadableDatabase();
+            Cursor crs = db.query("respuesta",new String[] { "rowid", "*" }, " pregunta = ? AND escorrecta = ? ", new String[] {String.valueOf(ct.getRowid()),String.valueOf(filter)}, null, null, null, null);
 
             if(crs != null)
             {
