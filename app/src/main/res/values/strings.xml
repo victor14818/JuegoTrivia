@@ -6,6 +6,8 @@
     <string name="editRespuesta">Editar Respuesta</string>
     <string name="listaCategorias">Categorías</string>
 
+    <string name="datosPT">Puntos: %1$s \t Tiempo: %2$s</string>
+
 
     <string name="apply">Apply</string>
 </resources>

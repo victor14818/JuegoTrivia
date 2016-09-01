@@ -114,4 +114,10 @@ public class MainActivity extends AppCompatActivity {
         Intent confIntent = new Intent(this, CategoryListActivity.class);
         startActivity(confIntent);
     }
+
+    public void btninicio(View v) {
+        Intent confIntent = new Intent(this, jp1.class);
+        startActivity(confIntent);
+    }
+
 }

@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class jp1 extends AppCompatActivity {
@@ -16,6 +18,12 @@ public class jp1 extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jp1);
+
+        //Setear el string que contiene los datos de punteo y tiempo
+        String notyet = getString(R.string.datosPT, "100", "00:00");
+        TextView textView1 = (TextView) findViewById(R.id.textView1_A);
+        textView1.setText(notyet);
+
         Button textView = (Button) findViewById(R.id.pregunta_A);
         assert textView != null;
         textView.setText(++miVar+") "+"Ingresar pregunta");
@@ -58,5 +66,12 @@ public class jp1 extends AppCompatActivity {
         startActivity(i);
         overridePendingTransition(R.anim.animacion2,R.anim.animacion1);
         finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        this.miVar=0;
+        jp2.miVar=0;
+        this.finish();
     }
 }

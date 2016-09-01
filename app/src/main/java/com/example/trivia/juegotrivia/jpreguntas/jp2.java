@@ -5,11 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.trivia.juegotrivia.R;
 
 public class jp2 extends AppCompatActivity {
-    static int miVar=0;
+    static public int miVar=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -20,6 +22,12 @@ public class jp2 extends AppCompatActivity {
          **/
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jp2);
+
+        //Setear al string que contiene los datos de punteo y tiempo
+        String notyet = getString(R.string.datosPT, "100", "00:00");
+        TextView textView1 = (TextView) findViewById(R.id.textView1_B);
+        textView1.setText(notyet);
+
         Button textView = (Button) findViewById(R.id.pregunta);
         textView.setText(++miVar+") "+"Ingresar pregunta");
 
@@ -76,5 +84,11 @@ public class jp2 extends AppCompatActivity {
         startActivity(i);
         overridePendingTransition(R.anim.animacion2,R.anim.animacion1);
         finish();
+    }
+    @Override
+    public void onBackPressed() {
+        this.miVar=0;
+        jp1.miVar=0;
+        this.finish();
     }
 }

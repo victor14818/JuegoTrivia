@@ -20,6 +20,19 @@
             android:layout_height="0dp"
             android:layout_weight="0.2" >
 
+            <TextView
+                android:layout_width="0sp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="datosPT"
+                android:id="@+id/textView1_B"
+                android:textAlignment="viewEnd"
+                android:fontFamily="cursive"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                />
+
         </TableRow>
 
         <TableRow
@@ -35,9 +48,10 @@
                 android:text="pregunta"
                 android:background="@drawable/custom_button_round_rect2_border"
                 android:textColor="#fff"
+                android:textAllCaps="false"
                 android:fontFamily="cursive"
-                android:textStyle="bold"
-                android:textSize="35sp"
+                android:textStyle="bold|italic"
+                android:textSize="40sp"
                 />
         </TableRow>
 
@@ -68,8 +82,9 @@
                 android:onClick="onButtonClick"
                 android:background="@drawable/custom_button_press_effect"
                 android:textColor="#fff"
+                android:textAllCaps="false"
                 android:fontFamily="cursive"
-                android:textStyle="bold"
+                android:textStyle="bold|italic"
                 android:textSize="30sp"
                 />
             <LinearLayout
@@ -106,8 +121,9 @@
                 android:onClick="onButtonClick"
                 android:background="@drawable/custom_button_press_effect"
                 android:textColor="#fff"
+                android:textAllCaps="false"
                 android:fontFamily="cursive"
-                android:textStyle="bold"
+                android:textStyle="bold|italic"
                 android:textSize="30sp"
                 />
             <LinearLayout
@@ -144,8 +160,9 @@
                 android:onClick="onButtonClick"
                 android:background="@drawable/custom_button_press_effect"
                 android:textColor="#fff"
+                android:textAllCaps="false"
                 android:fontFamily="cursive"
-                android:textStyle="bold"
+                android:textStyle="bold|italic"
                 android:textSize="30sp"
                 />
 
