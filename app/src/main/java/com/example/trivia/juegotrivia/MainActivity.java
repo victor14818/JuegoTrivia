@@ -117,4 +117,10 @@ public class MainActivity extends AppCompatActivity {
         Intent iintermedio = new Intent(this, intermedio.class);
         startActivity(iintermedio);
     }
+
+    public void btninicio(View v) {
+        Intent confIntent = new Intent(this, jp1.class);
+        startActivity(confIntent);
+    }
+
 }

@@ -6,6 +6,8 @@
     <string name="editRespuesta">Editar Respuesta</string>
     <string name="listaCategorias">Categorías</string>
 
+    <string name="datosPT">Puntos: %1$s \t Tiempo: %2$s</string>
+
 
     <!--Strings activity_main-->
     <string name="tprincipal">10 Años de Naturalidad y Frescura</string>
