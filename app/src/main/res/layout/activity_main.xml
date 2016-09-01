@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/tprincipal"
+            android:text="@string/tintermedio"
             android:id="@+id/textView"
             android:gravity="center_horizontal"
             android:layout_gravity="center_horizontal"
@@ -52,7 +52,7 @@
                 android:layout_margin="@dimen/MarginPrincipal"
                 android:layout_weight="0.2"
 
-                android:src="@drawable/lusac" />
+                />
 
             <ImageView
                 android:layout_width="match_parent"
@@ -60,9 +60,7 @@
                 android:id="@+id/imageViewTmp1"
                 android:scaleType="fitCenter"
                 android:layout_margin="@dimen/MarginPrincipal"
-                android:layout_weight="0.2"
-                android:src="@drawable/lusac"
-                />
+                android:layout_weight="0.2" />
 
             <ImageView
                 android:layout_width="match_parent"
@@ -70,9 +68,7 @@
                 android:id="@+id/imageViewTmp2"
                 android:scaleType="fitCenter"
                 android:layout_margin="@dimen/MarginPrincipal"
-                android:layout_weight="0.2"
-                android:src="@drawable/lusac"
-                />
+                android:layout_weight="0.2" />
 
             <ImageView
                 android:layout_width="match_parent"
@@ -80,9 +76,7 @@
                 android:id="@+id/imageViewTmp3"
                 android:scaleType="fitCenter"
                 android:layout_margin="@dimen/MarginPrincipal"
-                android:layout_weight="0.2"
-                android:src="@drawable/lusac"
-                />
+                android:layout_weight="0.2" />
 
             <ImageView
                 android:layout_width="match_parent"
@@ -90,9 +84,7 @@
                 android:id="@+id/imageViewTmp4"
                 android:scaleType="fitCenter"
                 android:layout_margin="@dimen/MarginPrincipal"
-                android:layout_weight="0.2"
-                android:src="@drawable/lusac"
-                />
+                android:layout_weight="0.2" />
 
 
         </LinearLayout>
@@ -110,9 +102,7 @@
                 android:id="@+id/imageViewTmp5"
                 android:scaleType="fitCenter"
                 android:layout_margin="@dimen/MarginPrincipal"
-                android:layout_weight="0.2"
-                android:src="@drawable/lusac"
-                />
+                android:layout_weight="0.2" />
 
             <ImageView
                 android:layout_width="match_parent"
@@ -120,9 +110,7 @@
                 android:id="@+id/imageViewTmp6"
                 android:scaleType="fitCenter"
                 android:layout_margin="@dimen/MarginPrincipal"
-                android:layout_weight="0.2"
-                android:src="@drawable/lusac"
-                />
+                android:layout_weight="0.2" />
 
             <ImageView
                 android:layout_width="match_parent"
@@ -130,9 +118,7 @@
                 android:id="@+id/imageViewTmp7"
                 android:scaleType="fitCenter"
                 android:layout_margin="@dimen/MarginPrincipal"
-                android:layout_weight="0.2"
-                android:src="@drawable/lusac"
-                />
+                android:layout_weight="0.2" />
 
             <ImageView
                 android:layout_width="match_parent"
@@ -140,9 +126,7 @@
                 android:id="@+id/imageViewTmp8"
                 android:scaleType="fitCenter"
                 android:layout_margin="@dimen/MarginPrincipal"
-                android:layout_weight="0.2"
-                android:src="@drawable/lusac"
-                />
+                android:layout_weight="0.2" />
 
             <ImageView
                 android:layout_width="match_parent"
@@ -150,9 +134,7 @@
                 android:id="@+id/imageViewTmp9"
                 android:scaleType="fitCenter"
                 android:layout_margin="@dimen/MarginPrincipal"
-                android:layout_weight="0.2"
-                android:src="@drawable/lusac"
-                />
+                android:layout_weight="0.2" />
 
         </LinearLayout>
 

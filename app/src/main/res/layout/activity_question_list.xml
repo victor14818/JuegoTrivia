@@ -14,241 +14,217 @@
 
 
     <LinearLayout
-        android:id="@+id/layoutPreg"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:weightSum="1"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="50dp">
+        android:weightSum="1" >
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:fontFamily="cursive"
-                android:text="@string/editCategoria"
-                android:id="@+id/TextViewTituloCategoria"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:textIsSelectable="false"
-                android:layout_weight="0.04"
-                android:textSize="@dimen/tituloConf"
-                android:textStyle="bold|italic"
-                />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:fontFamily="cursive"
+            android:text="@string/editCategoria"
+            android:id="@+id/TextViewTituloCategoria"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textIsSelectable="false"
+            android:layout_weight="0.05"
+            android:textSize="@dimen/tituloConf"
+            android:textStyle="bold|italic" />
 
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.04"
-                android:padding="5dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:fontFamily="cursive"
-                    android:text="Nombre*"
-                    android:gravity="start"
-                    android:textIsSelectable="false"
-                    android:textSize="@dimen/attConf"
-                    android:textStyle="bold|italic"
-                    android:layout_marginStart="15dp"/>
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/attConf"
-                    android:inputType="textPersonName"
-                    android:ems="10"
-                    android:id="@+id/editText_nombreCat"
-                    android:layout_weight="1"
-                    android:background="@android:color/holo_orange_light"
-                    android:layout_marginStart="@dimen/attConfml"
-                    android:layout_marginEnd="15dp"
-                    android:textStyle="bold|italic" />
-            </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" >
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.04"
-                android:padding="5dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:fontFamily="cursive"
-                    android:text="Texto*"
-                    android:gravity="start"
-                    android:textIsSelectable="false"
-                    android:textSize="@dimen/attConf"
-                    android:textStyle="bold|italic"
-                    android:layout_marginStart="15dp" />
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/attConfM"
-                    android:inputType="textMultiLine"
-                    android:id="@+id/editText_textoCat"
-                    android:background="@android:color/holo_orange_light"
-                    android:layout_marginEnd="15dp"
-                    android:textStyle="bold|italic"
-                    android:layout_weight="1.15"
-                    android:ems="10"
-                    android:layout_marginStart="@dimen/attConfml" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.04"
-                android:padding="5dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:fontFamily="cursive"
-                    android:text="Imagen Menú"
-                    android:gravity="start"
-                    android:textIsSelectable="false"
-                    android:textSize="@dimen/attConf"
-                    android:textStyle="bold|italic"
-                    android:layout_marginStart="15dp" />
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/attConf"
-                    android:inputType="textMultiLine"
-                    android:id="@+id/editText_imgpCat"
-                    android:background="@android:color/holo_orange_light"
-                    android:layout_marginEnd="15dp"
-                    android:textStyle="bold|italic"
-                    android:layout_weight="1.15"
-                    android:ems="10"
-                    android:layout_marginStart="@dimen/attConfml" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.04"
-                android:padding="5dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:fontFamily="cursive"
-                    android:text="Imagen Fondo"
-                    android:gravity="start"
-                    android:textIsSelectable="false"
-                    android:textSize="@dimen/attConf"
-                    android:textStyle="bold|italic"
-                    android:layout_marginStart="15dp" />
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/attConf"
-                    android:inputType="textMultiLine"
-                    android:id="@+id/editText_imgsCat"
-                    android:background="@android:color/holo_orange_light"
-                    android:layout_marginEnd="15dp"
-                    android:textStyle="bold|italic"
-                    android:layout_weight="1.15"
-                    android:ems="10"
-                    android:layout_marginStart="@dimen/attConf" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.04"
-                android:padding="5dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:fontFamily="cursive"
-                    android:text="Audio"
-                    android:gravity="start"
-                    android:textIsSelectable="false"
-                    android:textSize="@dimen/attConf"
-                    android:textStyle="bold|italic"
-                    android:layout_marginStart="15dp"/>
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/attConf"
-                    android:inputType="textPersonName"
-                    android:ems="10"
-                    android:id="@+id/editText_audioCat"
-                    android:layout_weight="1"
-                    android:background="@android:color/holo_orange_light"
-                    android:layout_marginStart="@dimen/attConfml"
-                    android:layout_marginEnd="15dp"
-                    android:textStyle="bold|italic" />
-            </LinearLayout>
-
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/scrollViewListaPreguntas"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="0.6"
-                android:fillViewport="false"
-                android:layout_marginTop="@dimen/Scroll">
+                android:layout_height="match_parent"
+                android:weightSum="1" >
 
                 <LinearLayout
-                    android:id="@+id/layoutPreguntas"
                     android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:fontFamily="cursive"
+                        android:text="Nombre*"
+                        android:gravity="start"
+                        android:textIsSelectable="false"
+                        android:textSize="@dimen/attConf"
+                        android:textStyle="bold|italic"
+                        android:layout_marginStart="@dimen/attConfml"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/attConf"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editText_nombreCat"
+                        android:background="@android:color/holo_orange_light"
+                        android:layout_marginStart="@dimen/attConfml"
+                        android:layout_marginEnd="15dp"
+                        android:textStyle="bold|italic" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:fontFamily="cursive"
+                        android:text="Texto*"
+                        android:gravity="start"
+                        android:textIsSelectable="false"
+                        android:textSize="@dimen/attConf"
+                        android:textStyle="bold|italic"
+                        android:layout_marginStart="@dimen/attConfml" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/attConfM"
+                        android:inputType="textMultiLine"
+                        android:id="@+id/editText_textoCat"
+                        android:background="@android:color/holo_orange_light"
+                        android:textStyle="bold|italic"
+                        android:ems="10"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="@dimen/attConfml" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:fontFamily="cursive"
+                        android:text="Imagen Menú"
+                        android:gravity="start"
+                        android:textIsSelectable="false"
+                        android:textSize="@dimen/attConf"
+                        android:textStyle="bold|italic"
+                        android:layout_marginStart="@dimen/attConfml" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/attConf"
+                        android:inputType="textMultiLine"
+                        android:id="@+id/editText_imgpCat"
+                        android:background="@android:color/holo_orange_light"
+                        android:textStyle="bold|italic"
+                        android:ems="10"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="@dimen/attConfml" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:fontFamily="cursive"
+                        android:text="Imagen Fondo"
+                        android:gravity="start"
+                        android:textIsSelectable="false"
+                        android:textSize="@dimen/attConf"
+                        android:textStyle="bold|italic"
+                        android:layout_marginStart="@dimen/attConfml"
+                         />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/attConf"
+                        android:id="@+id/editText_imgsCat"
+                        android:inputType="textPersonName"
+                        android:background="@android:color/holo_orange_light"
+                        android:textStyle="bold|italic"
+                        android:ems="10"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="@dimen/attConfml" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:fontFamily="cursive"
+                        android:text="Audio"
+                        android:gravity="start"
+                        android:textIsSelectable="false"
+                        android:textSize="@dimen/attConf"
+                        android:textStyle="bold|italic"
+                        android:layout_marginStart="@dimen/attConfml" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/attConf"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/editText_audioCat"
+                        android:background="@android:color/holo_orange_light"
+                        android:layout_marginStart="@dimen/attConfml"
+                        android:layout_marginEnd="15dp"
+                        android:textStyle="bold|italic" />
                 </LinearLayout>
-            </ScrollView>
 
-    </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8" >
 
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/scrollViewListaPreguntas"
+                        android:layout_gravity="center_horizontal"
+                        android:fillViewport="false" >
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="1"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:gravity="end"
-        android:layout_marginBottom="@dimen/Scroll">
+                        <LinearLayout
+                            android:id="@+id/layoutPreguntas"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
 
-        <Button
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/apply"
-            android:id="@+id/buttonApplyCat"
-            android:layout_weight=".25"
-            android:layout_gravity="start"
-            android:textAppearance="@style/applyText"
-            android:textSize="@dimen/attConf" />
+            android:weightSum="1"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="end"
+            android:layout_weight="0.05"
+            android:layout_marginBottom="@dimen/Margen_borde">
 
-        <ImageButton
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:id="@+id/imageButton_addQuest"
-            android:src="@drawable/plus"
-            android:scaleType="fitCenter"
-            android:layout_weight="0.25"
-            android:contentDescription="@string/descConfImage"
-            android:adjustViewBounds="false"
-            android:onClick="addQuestion" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/apply"
+                android:id="@+id/buttonApplyCat"
+                android:layout_weight=".25"
+                android:layout_gravity="start"
+                android:textAppearance="@style/applyText"
+                android:textSize="@dimen/attConf" />
 
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:id="@+id/imageButton_addQuest"
+                android:src="@drawable/plus"
+                android:scaleType="fitCenter"
+                android:layout_weight="0.25"
+                android:contentDescription="@string/descConfImage"
+                android:adjustViewBounds="false"
+                android:onClick="addQuestion" />
+
+        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

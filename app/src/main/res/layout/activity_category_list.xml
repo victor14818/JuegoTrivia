@@ -10,116 +10,123 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.trivia.juegotrivia.CategoryListActivity"
-    android:background="@android:color/holo_orange_dark">
+    android:background="@android:color/holo_orange_dark" >
 
 
     <LinearLayout
-        android:id="@+id/layoutCat"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:weightSum="1"
-        android:layout_marginBottom="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_gravity="center_horizontal" >
+        android:weightSum="1" >
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:fontFamily="cursive"
-            android:text="@string/listaCategorias"
-            android:id="@+id/textViewCategorias"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center"
-            android:textIsSelectable="false"
-            android:layout_weight="0.04"
-            android:textSize="@dimen/tituloConf"
-            android:textStyle="bold|italic"
-            />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:fontFamily="cursive"
+        android:text="@string/listaCategorias"
+        android:id="@+id/textViewCategorias"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textIsSelectable="false"
+        android:layout_weight="0.05"
+        android:textSize="@dimen/tituloConf"
+        android:textStyle="bold|italic"
+        android:layout_marginTop="@dimen/Margen_borde" />
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.04"
-            android:padding="5dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:fontFamily="cursive"
-                android:text="Nueva Password"
-                android:gravity="start"
-                android:textIsSelectable="false"
-                android:textSize="@dimen/attConf"
-                android:textStyle="bold|italic"
-                android:layout_marginStart="15dp"
-                />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1" >
 
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/attConf"
-                android:inputType="textPassword"
-                android:ems="10"
-                android:id="@+id/editTextNvPass"
-                android:layout_weight="1"
-                android:background="@android:color/holo_orange_light"
-                android:layout_marginStart="@dimen/attConfml"
-                android:layout_marginEnd="15dp"
-                android:textStyle="bold|italic" />
-        </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.04"
-            android:padding="5dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:fontFamily="cursive"
-                android:text="Password Anterior"
-                android:gravity="start"
-                android:textIsSelectable="false"
-                android:textSize="@dimen/attConf"
-                android:textStyle="bold|italic"
-                android:layout_marginStart="15dp"/>
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/attConf"
-                android:inputType="textPassword"
-                android:ems="10"
-                android:id="@+id/editTextOldPass"
-                android:layout_weight="1"
-                android:background="@android:color/holo_orange_light"
-                android:layout_marginStart="@dimen/attConfml"
-                android:layout_marginEnd="15dp"
-                android:textStyle="bold|italic" />
-        </LinearLayout>
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/scrollViewListaCategorias"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="0.75"
-            android:fillViewport="false"
-            android:layout_marginTop="@dimen/Scroll">
+            android:layout_height="match_parent"
+            android:weightSum="1" >
 
             <LinearLayout
-                android:id="@+id/layoutCategorias"
                 android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:fontFamily="cursive"
+                    android:text="Nueva Password"
+                    android:gravity="start"
+                    android:textIsSelectable="false"
+                    android:textSize="@dimen/attConf"
+                    android:textStyle="bold|italic"
+                    android:layout_marginStart="15dp"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/attConf"
+                    android:inputType="textPassword"
+                    android:ems="10"
+                    android:id="@+id/editTextNvPass"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_marginStart="@dimen/attConfml"
+                    android:layout_marginEnd="15dp"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:fontFamily="cursive"
+                    android:text="Password Anterior"
+                    android:gravity="start"
+                    android:textIsSelectable="false"
+                    android:textSize="@dimen/attConf"
+                    android:textStyle="bold|italic"
+                    android:layout_marginStart="15dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/attConf"
+                    android:inputType="textPassword"
+                    android:ems="10"
+                    android:id="@+id/editTextOldPass"
+                    android:layout_weight="1"
+                    android:background="@android:color/holo_orange_light"
+                    android:layout_marginStart="@dimen/attConfml"
+                    android:layout_marginEnd="15dp"
+                    android:textStyle="bold|italic" />
             </LinearLayout>
-        </ScrollView>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8" >
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/scrollViewListaCategorias"
+                    android:layout_gravity="center_horizontal"
+                    android:fillViewport="false">
+
+                    <LinearLayout
+                        android:id="@+id/layoutCategorias"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -129,7 +136,9 @@
         android:weightSum="1"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:gravity="end">
+        android:gravity="end"
+        android:layout_weight="0.05"
+        android:layout_marginBottom="@dimen/Margen_borde">
 
         <Button
             android:layout_width="wrap_content"
@@ -143,5 +152,6 @@
             android:layout_marginBottom="@dimen/Scroll"
             />
 
+    </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

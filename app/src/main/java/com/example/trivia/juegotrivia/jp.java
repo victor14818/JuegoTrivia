@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import java.util.Random;
 
@@ -20,6 +21,11 @@ public class jp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jp);
+
+        //Setear el string que contiene los datos de punteo y tiempo
+        String notyet = getString(R.string.datosPT, "100", "00:00");
+        TextView textView1 = (TextView) findViewById(R.id.textView_Datos);
+        textView1.setText(notyet);
 
         //obteniendo pregunta
         ModeloCategoria md = new ModeloCategoria(this);
@@ -68,7 +74,6 @@ public class jp extends AppCompatActivity {
                     while (incorrecta1.equals(incorrecta2)) {
                         incorrecta2 = rptFalse[rm.nextInt(rptFalse.length)];
                     }
-
 
                     int posTmp = rm.nextInt(3);
                     int aux = 0;

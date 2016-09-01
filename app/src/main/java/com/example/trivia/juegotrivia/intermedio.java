@@ -96,10 +96,10 @@ public class intermedio extends AppCompatActivity {
         this.pararMusica();
     }
 
-    @Override
-    public void onBackPressed()
-    {
-        moveTaskToBack(true);
-    }
+//    @Override
+//    public void onBackPressed()
+//    {
+//        moveTaskToBack(true);
+//    }
 
 }

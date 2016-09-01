@@ -135,6 +135,8 @@ public class AnswerActivity extends AppCompatActivity {
                     //ingresar
                     Pregunta nv = new Pregunta(t, cateogira_id, Integer.parseInt(p), a, Long.parseLong("-1"));
                     md.addPregutna(nv);
+
+                    //actualizar pregunta actual
                 }
                 Toast.makeText(this, "Las modificaciones han sido correctas", Toast.LENGTH_SHORT).show();
             }
