@@ -7,5 +7,22 @@
     <string name="listaCategorias">Categorías</string>
 
 
+    <!--Strings activity_main-->
+    <string name="tprincipal">10 Años de Naturalidad y Frescura</string>
+    <string name="img_categoria1">img_categoria1</string>
+    <string name="img_categoria2">img_categoria2</string>
+    <string name="img_categoria3">img_categoria3</string>
+    <string name="img_categoria4">img_categoria4</string>
+    <string name="img_categoria5">img_categoria5</string>
+    <string name="img_categoria6">img_categoria6</string>
+    <string name="img_categoria7">img_categoria7</string>
+    <string name="img_categoria8">img_categoria8</string>
+    <string name="img_categoria9">img_categoria9</string>
+    <string name="img_categoria10">img_categoria10</string>
+
+    <!--Strings intermedio-->
+    <string name="tintermedio">Categoria</string>
+
     <string name="apply">Apply</string>
+
 </resources>

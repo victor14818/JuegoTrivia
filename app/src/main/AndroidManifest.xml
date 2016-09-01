@@ -34,7 +34,8 @@
         <activity android:name=".Tmp" />
         <activity android:name=".jpreguntas.jp1" />
         <activity android:name=".jpreguntas.jp2" />
-        <activity android:name=".jp"></activity>
+        <activity android:name=".jp" />
+        <activity android:name=".intermedio"></activity>
     </application>
 
 </manifest>

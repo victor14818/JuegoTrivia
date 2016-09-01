@@ -7,6 +7,9 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation = "horizontal"
+    android:alignmentMode="alignBounds"
+    android:background="@drawable/fondom"
     tools:context="com.example.trivia.juegotrivia.MainActivity" >
 
     <LinearLayout
@@ -17,137 +20,155 @@
         android:layout_alignParentStart="true"
         android:weightSum="1.0">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/tprincipal"
+            android:id="@+id/textView"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#921616"
+            android:fontFamily="cursive"
+            android:textIsSelectable="false"
+            android:textSize="50dp"
+            />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_centerVertical="true"
             android:layout_alignParentStart="true"
-            android:layout_weight="0.95"
+            android:layout_weight="0.5"
             android:weightSum="1">
 
-            <LinearLayout
-                android:orientation="horizontal"
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="0.5"
-                android:weightSum="1">
+                android:layout_height="match_parent"
+                android:id="@+id/imageViewTmp0"
+                android:scaleType="fitCenter"
+                android:layout_margin="@dimen/MarginPrincipal"
+                android:layout_weight="0.2"
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/imageViewTmp0"
-                    android:scaleType="fitCenter"
-                    android:layout_margin="@dimen/MarginPrincipal"
-                    android:layout_weight="0.2" />
+                android:src="@drawable/lusac" />
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/imageViewTmp1"
-                    android:scaleType="fitCenter"
-                    android:layout_margin="@dimen/MarginPrincipal"
-                    android:layout_weight="0.2" />
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/imageViewTmp2"
-                    android:scaleType="fitCenter"
-                    android:layout_margin="@dimen/MarginPrincipal"
-                    android:layout_weight="0.2" />
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/imageViewTmp3"
-                    android:scaleType="fitCenter"
-                    android:layout_margin="@dimen/MarginPrincipal"
-                    android:layout_weight="0.2" />
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/imageViewTmp4"
-                    android:scaleType="fitCenter"
-                    android:layout_margin="@dimen/MarginPrincipal"
-                    android:layout_weight="0.2" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="0.5">
+                android:layout_height="match_parent"
+                android:id="@+id/imageViewTmp1"
+                android:scaleType="fitCenter"
+                android:layout_margin="@dimen/MarginPrincipal"
+                android:layout_weight="0.2"
+                android:src="@drawable/lusac"
+                />
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/imageViewTmp5"
-                    android:scaleType="fitCenter"
-                    android:layout_margin="@dimen/MarginPrincipal"
-                    android:layout_weight="0.2" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageViewTmp2"
+                android:scaleType="fitCenter"
+                android:layout_margin="@dimen/MarginPrincipal"
+                android:layout_weight="0.2"
+                android:src="@drawable/lusac"
+                />
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/imageViewTmp6"
-                    android:scaleType="fitCenter"
-                    android:layout_margin="@dimen/MarginPrincipal"
-                    android:layout_weight="0.2" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageViewTmp3"
+                android:scaleType="fitCenter"
+                android:layout_margin="@dimen/MarginPrincipal"
+                android:layout_weight="0.2"
+                android:src="@drawable/lusac"
+                />
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/imageViewTmp7"
-                    android:scaleType="fitCenter"
-                    android:layout_margin="@dimen/MarginPrincipal"
-                    android:layout_weight="0.2" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageViewTmp4"
+                android:scaleType="fitCenter"
+                android:layout_margin="@dimen/MarginPrincipal"
+                android:layout_weight="0.2"
+                android:src="@drawable/lusac"
+                />
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/imageViewTmp8"
-                    android:scaleType="fitCenter"
-                    android:layout_margin="@dimen/MarginPrincipal"
-                    android:layout_weight="0.2" />
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:id="@+id/imageViewTmp9"
-                    android:scaleType="fitCenter"
-                    android:layout_margin="@dimen/MarginPrincipal"
-                    android:layout_weight="0.2" />
-
-            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.025"
-            android:layout_marginBottom="@dimen/MargenBottonConf"
-            android:weightSum="1">
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.5">
 
-                <ImageButton
-                    android:layout_width="@dimen/BottonConf"
-                    android:layout_height="@dimen/BottonConf"
-                    android:id="@+id/imageButton_config"
-                    android:scaleType="fitCenter"
-                    android:background="@android:color/transparent"
-                    android:contentDescription="@string/descConfImage"
-                    android:src="@drawable/gear"
-                    android:onClick="btnCfg"
-                    android:layout_weight="1"
-                    android:layout_gravity="center_vertical" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageViewTmp5"
+                android:scaleType="fitCenter"
+                android:layout_margin="@dimen/MarginPrincipal"
+                android:layout_weight="0.2"
+                android:src="@drawable/lusac"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageViewTmp6"
+                android:scaleType="fitCenter"
+                android:layout_margin="@dimen/MarginPrincipal"
+                android:layout_weight="0.2"
+                android:src="@drawable/lusac"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageViewTmp7"
+                android:scaleType="fitCenter"
+                android:layout_margin="@dimen/MarginPrincipal"
+                android:layout_weight="0.2"
+                android:src="@drawable/lusac"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageViewTmp8"
+                android:scaleType="fitCenter"
+                android:layout_margin="@dimen/MarginPrincipal"
+                android:layout_weight="0.2"
+                android:src="@drawable/lusac"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageViewTmp9"
+                android:scaleType="fitCenter"
+                android:layout_margin="@dimen/MarginPrincipal"
+                android:layout_weight="0.2"
+                android:src="@drawable/lusac"
+                />
 
         </LinearLayout>
 
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton_config"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/descConfImage"
+            android:src="@android:drawable/ic_dialog_dialer"
+            android:onClick="btnCfg"
+            android:layout_weight="1"
+            android:layout_gravity="bottom|right" />
+
     </LinearLayout>
+
+
 </RelativeLayout>

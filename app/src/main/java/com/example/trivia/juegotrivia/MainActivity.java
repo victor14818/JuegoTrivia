@@ -111,7 +111,10 @@ public class MainActivity extends AppCompatActivity {
 //        Intent confIntent = new Intent(this, CategoryListActivity.class);
 //        startActivity(confIntent);
 
-        Intent confIntent = new Intent(this, CategoryListActivity.class);
-        startActivity(confIntent);
+//        Intent confIntent = new Intent(this, CategoryListActivity.class);
+//        startActivity(confIntent);
+
+        Intent iintermedio = new Intent(this, intermedio.class);
+        startActivity(iintermedio);
     }
 }
